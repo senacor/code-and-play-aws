@@ -1,0 +1,3 @@
+# configure the wikipedia language to use (de|en|...)
+wikipedia:
+  language: de

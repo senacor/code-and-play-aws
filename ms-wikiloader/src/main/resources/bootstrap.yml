@@ -3,24 +3,15 @@ spring:
       name: "wikiloader"
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
 
-spring.boot.admin.client.prefer-ip: true
-eureka.instance.preferIpAddress: true
-
 ---
 spring.profiles: lokal
 spring.profiles.include: mock
 
-eureka:
-  client:
-    enabled: false
-    register-with-eureka: false
 server:
   port: 11112
-spring.cloud.config.discovery.enabled: false
 
 ---
 spring:
   profiles: prod
-spring.cloud.config.uri: http://62.53.248.229:8300
 server.port: 8080
 

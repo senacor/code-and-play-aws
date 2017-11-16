@@ -50,7 +50,7 @@ public class WikipediaServiceJapiMock extends WikipediaServiceJapiImpl {
                 String resourceName = "mock/" + name + ".txt";
                 Resource resource = loader.getResource("classpath:" + resourceName);
                 notNull(resource, "no mockdata found for " + name);
-                logger.info("load mock data: " + resource.getFilename());
+                logger.info("load mock data: " + resource.getURL());
                 String res;
                 try (InputStream inputStream = resource.getInputStream()) {
                     res = IOUtils.toString(inputStream, StandardCharsets.UTF_8);

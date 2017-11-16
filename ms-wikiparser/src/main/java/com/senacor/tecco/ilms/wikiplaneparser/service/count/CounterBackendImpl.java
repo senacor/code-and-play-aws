@@ -1,7 +1,7 @@
 package com.senacor.tecco.ilms.wikiplaneparser.service.count;
 
-import com.senacor.tecco.ilms.wikiplaneparser.service.DelayUtil;
-import com.senacor.tecco.ilms.wikiplaneparser.service.ReactiveUtil;
+import com.senacor.tecco.ilms.common.utils.DelayUtil;
+import com.senacor.tecco.ilms.common.utils.ReactiveUtil;
 import de.tudarmstadt.ukp.wikipedia.parser.ParsedPage;
 import org.apache.commons.lang3.Validate;
 import org.springframework.beans.factory.annotation.Autowired;

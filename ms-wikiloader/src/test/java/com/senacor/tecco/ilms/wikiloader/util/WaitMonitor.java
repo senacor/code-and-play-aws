@@ -3,7 +3,7 @@ package com.senacor.tecco.ilms.wikiloader.util;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-import static com.senacor.tecco.ilms.wikiloader.service.integration.ReactiveUtil.print;
+import static com.senacor.tecco.ilms.common.utils.ReactiveUtil.print;
 
 /**
  * Simple Wrapper to Block main Thread until async execution finished.

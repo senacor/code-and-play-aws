@@ -1,6 +1,7 @@
 package com.senacor.tecco.ilms.wikiloader.config;
 
 import com.bitplan.mediawiki.japi.Mediawiki;
+import com.senacor.tecco.ilms.common.utils.DelayUtil;
 import de.tudarmstadt.ukp.wikipedia.parser.mediawiki.MediaWikiParser;
 import de.tudarmstadt.ukp.wikipedia.parser.mediawiki.MediaWikiParserFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -31,5 +32,10 @@ public class WikiConfig {
     @Bean
     public Mediawiki mediawiki() throws Exception {
         return new Mediawiki("https://" + wikipediaLanguage + ".wikipedia.org");
+    }
+
+    @Bean
+    public DelayUtil delayUtil() {
+        return new DelayUtil();
     }
 }

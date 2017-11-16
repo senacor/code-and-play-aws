@@ -1,5 +1,6 @@
 package com.senacor.tecco.ilms.wikiloader.service.integration;
 
+import com.senacor.tecco.ilms.common.utils.DelayUtil;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,12 +13,6 @@ import rx.Single;
 
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 
 import static org.apache.commons.lang3.Validate.notNull;
 

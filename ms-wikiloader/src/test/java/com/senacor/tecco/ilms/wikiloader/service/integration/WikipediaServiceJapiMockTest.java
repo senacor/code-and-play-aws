@@ -1,8 +1,7 @@
 package com.senacor.tecco.ilms.wikiloader.service.integration;
 
+import com.senacor.tecco.ilms.common.utils.DelayUtil;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * @author Andreas Keefer

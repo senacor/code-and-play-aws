@@ -2,10 +2,10 @@ package com.senacor.tecco.ilms.wikiplaneparser.controller;
 
 import com.senacor.tecco.ilms.common.exception.ApplicationException;
 import com.senacor.tecco.ilms.common.response.ServiceResponse;
-import com.senacor.tecco.ilms.wikiplaneparser.service.count.CounterBackend;
 import com.senacor.tecco.ilms.wikiplaneparser.service.FetchArticleService;
 import com.senacor.tecco.ilms.wikiplaneparser.service.MediaWikiTextParser;
 import com.senacor.tecco.ilms.wikiplaneparser.service.WikiPlaneParserService;
+import com.senacor.tecco.ilms.wikiplaneparser.service.count.CounterBackend;
 import com.senacor.tecco.ilms.wikiplaneparser.service.rating.RatingBackend;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

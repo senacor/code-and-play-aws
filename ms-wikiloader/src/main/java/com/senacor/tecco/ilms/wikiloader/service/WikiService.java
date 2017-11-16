@@ -19,7 +19,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.function.Consumer;
 
-import static com.senacor.tecco.ilms.wikiloader.service.integration.ReactiveUtil.print;
+import static com.senacor.tecco.ilms.common.utils.ReactiveUtil.print;
 
 /**
  * @author Andreas Keefer

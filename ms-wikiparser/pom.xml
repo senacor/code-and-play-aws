@@ -33,9 +33,9 @@
             <version>${httpclient.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.senacor.tecco.ilms</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>common-service</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
         <!-- Media Wiki Parser -->
         <dependency>

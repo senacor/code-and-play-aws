@@ -1,4 +1,4 @@
-package com.senacor.tecco.ilms.wikiloader.service.integration;
+package com.senacor.tecco.ilms.common.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,6 @@ import java.util.concurrent.Future;
 /**
  * @author Andreas Keefer
  */
-@Component
 public class DelayUtil {
 
     private static final Logger logger = LoggerFactory.getLogger(DelayUtil.class);

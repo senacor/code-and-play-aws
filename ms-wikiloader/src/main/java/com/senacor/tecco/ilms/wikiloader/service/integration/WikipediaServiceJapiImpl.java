@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import rx.Observable;
 
-import static com.senacor.tecco.ilms.wikiloader.service.integration.ReactiveUtil.print;
+import static com.senacor.tecco.ilms.common.utils.ReactiveUtil.print;
 
 /**
  * @author Andreas Keefer

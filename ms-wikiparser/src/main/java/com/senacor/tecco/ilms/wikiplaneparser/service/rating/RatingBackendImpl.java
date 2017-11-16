@@ -1,6 +1,6 @@
 package com.senacor.tecco.ilms.wikiplaneparser.service.rating;
 
-import com.senacor.tecco.ilms.wikiplaneparser.service.DelayUtil;
+import com.senacor.tecco.ilms.common.utils.DelayUtil;
 import de.tudarmstadt.ukp.wikipedia.parser.ParsedPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

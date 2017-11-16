@@ -1,4 +1,4 @@
-package com.senacor.tecco.ilms.wikiloader.service.integration;
+package com.senacor.tecco.ilms.common.utils;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.RandomUtils;

@@ -1,19 +1,19 @@
 package com.senacor.tecco.ilms.common.exception;
 
-        import com.senacor.tecco.ilms.common.response.ServiceResponse;
-        import org.slf4j.Logger;
-        import org.slf4j.LoggerFactory;
-        import org.springframework.beans.propertyeditors.CustomDateEditor;
-        import org.springframework.http.HttpStatus;
-        import org.springframework.http.ResponseEntity;
-        import org.springframework.web.bind.WebDataBinder;
-        import org.springframework.web.bind.annotation.ControllerAdvice;
-        import org.springframework.web.bind.annotation.ExceptionHandler;
-        import org.springframework.web.bind.annotation.InitBinder;
-        import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+import com.senacor.tecco.ilms.common.response.ServiceResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-        import java.text.SimpleDateFormat;
-        import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @ControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {

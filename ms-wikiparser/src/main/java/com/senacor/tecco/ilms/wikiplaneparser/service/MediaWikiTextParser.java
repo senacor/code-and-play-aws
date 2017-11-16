@@ -1,5 +1,6 @@
 package com.senacor.tecco.ilms.wikiplaneparser.service;
 
+import com.senacor.tecco.ilms.common.utils.ReactiveUtil;
 import de.tudarmstadt.ukp.wikipedia.parser.ParsedPage;
 import de.tudarmstadt.ukp.wikipedia.parser.mediawiki.MediaWikiParser;
 import org.springframework.stereotype.Component;

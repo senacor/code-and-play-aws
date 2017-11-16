@@ -1,5 +1,6 @@
 package com.senacor.tecco.ilms.wikiloader.service.integration;
 
+import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Profile;
@@ -8,6 +9,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 import rx.Single;
 
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -50,9 +52,8 @@ public class WikipediaServiceJapiMock extends WikipediaServiceJapiImpl {
                 String resourceName = "mock/" + name + ".txt";
                 Resource resource = loader.getResource("classpath:" + resourceName);
                 notNull(resource, "no mockdata found for " + name);
-                Path path = Paths.get(resource.getURI());
-                logger.info("load mock data: " + path.toString());
-                String res = new String(Files.readAllBytes(path));
+                logger.info("load mock data: " + resource.getFilename());
+                String res = IOUtils.toString(resource.getInputStream(), StandardCharsets.UTF_8);
                 logger.info("fetched mock article '{}'", name);
                 singleSubscriber.onSuccess(res);
             } catch (Exception e) {

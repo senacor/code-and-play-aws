@@ -7,16 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.ws.rs.core.MediaType;
 
 
 @RestController
-@RequestMapping("/services/wiki")
+@RequestMapping(value = "/services/wiki", produces = MediaType.APPLICATION_JSON)
 public class WikiController {
 
     @Autowired
@@ -28,9 +25,21 @@ public class WikiController {
      * @param articleName article name
      * @return article in media wiki format
      */
-    @RequestMapping(value = "fetchArticle", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON)
-    public HttpEntity<ServiceResponse<String>> fetchArticle(@RequestParam(value = "articleName") String articleName)
-        throws ApplicationException {
+    @GetMapping("fetchArticle")
+    public HttpEntity<ServiceResponse<String>> fetchArticle(@RequestParam("articleName") String articleName)
+            throws ApplicationException {
+        return getArticle(articleName);
+    }
+
+    /**
+     * GET article
+     *
+     * @param articleName article name
+     * @return article in media wiki format
+     */
+    @GetMapping("article/{articleName}")
+    public HttpEntity<ServiceResponse<String>> getArticle(@PathVariable("articleName") String articleName)
+            throws ApplicationException {
         String res = wikiService.fetchArticle(articleName);
         ServiceResponse<String> serviceResponse = new ServiceResponse<>(res);
         return new ResponseEntity<>(serviceResponse, HttpStatus.OK);

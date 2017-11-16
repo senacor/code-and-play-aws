@@ -9,10 +9,8 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 import rx.Single;
 
+import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 import static org.apache.commons.lang3.Validate.notNull;
 
@@ -53,7 +51,10 @@ public class WikipediaServiceJapiMock extends WikipediaServiceJapiImpl {
                 Resource resource = loader.getResource("classpath:" + resourceName);
                 notNull(resource, "no mockdata found for " + name);
                 logger.info("load mock data: " + resource.getFilename());
-                String res = IOUtils.toString(resource.getInputStream(), StandardCharsets.UTF_8);
+                String res;
+                try (InputStream inputStream = resource.getInputStream()) {
+                    res = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
+                }
                 logger.info("fetched mock article '{}'", name);
                 singleSubscriber.onSuccess(res);
             } catch (Exception e) {

@@ -1,0 +1,18 @@
+spring:
+  application:
+      name: "wikiparser"
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 10000
+
+---
+spring.profiles: lokal
+spring.profiles.include: mock
+
+server:
+  port: 11113
+
+wikiloader.url: "http://localhost:11112"
+
+---
+spring:
+  profiles: prod
+server.port: 8080

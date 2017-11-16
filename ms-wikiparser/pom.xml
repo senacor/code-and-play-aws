@@ -10,29 +10,32 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>ms-wikiloader</artifactId>
+    <artifactId>ms-wikiparser</artifactId>
 
-    <name>MS Wikiloader services</name>
+    <name>MS Wikiparser services</name>
 
     <properties>
     </properties>
 
     <dependencies>
+        <!--<dependency>-->
+        <!--<groupId>org.springframework.cloud</groupId>-->
+        <!--<artifactId>spring-cloud-starter-ribbon</artifactId>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient-cache</artifactId>
             <version>${httpclient.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.senacor.codeandplay.aws</groupId>
+            <groupId>com.senacor.tecco.ilms</groupId>
             <artifactId>common-service</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <!-- Wikipedia API -->
-        <dependency>
-            <groupId>com.bitplan</groupId>
-            <artifactId>mediawiki-japi</artifactId>
-            <version>0.0.5</version>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <!-- Media Wiki Parser -->
         <dependency>

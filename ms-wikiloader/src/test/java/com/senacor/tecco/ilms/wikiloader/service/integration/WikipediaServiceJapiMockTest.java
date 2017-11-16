@@ -11,7 +11,9 @@ public class WikipediaServiceJapiMockTest {
 
     @Test
     public void getPageContent() throws Exception {
-        new WikipediaServiceJapiMock(1000).getPageContent("42");
+        WikipediaServiceJapiMock wikipediaServiceJapiMock = new WikipediaServiceJapiMock(1000);
+        wikipediaServiceJapiMock.setDelayUtil(new DelayUtil());
+        wikipediaServiceJapiMock.getPageContent("42");
     }
 
 }
